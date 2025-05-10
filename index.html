@@ -1,87 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Te Amo</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #ffafbd, #ffc3a0);
-      font-family: 'Arial', sans-serif;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Amor</title>
+    <style>
+        /* Estilo básico */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fddde6; /* Fondo suave rosado */
+            color: #6d4f7d; /* Color de texto morado oscuro */
+            margin: 0;
+            padding: 0;
+        }
 
-    h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    }
+        /* Estilo para el encabezado */
+        header {
+            background-color: #ff8fa3; /* Rosa suave */
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 5px solid #ff4c79; /* Líneas decorativas */
+        }
 
-    .heart {
-      width: 100px;
-      height: 90px;
-      position: relative;
-      animation: beat 1s infinite;
-      margin-top: 10px;
-    }
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
 
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 100px;
-      height: 90px;
-      background: red;
-      border-radius: 50px 50px 0 0;
-    }
+        header p {
+            font-size: 20px;
+            margin: 10px 0 0;
+        }
 
-    .heart::before {
-      left: 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
+        /* Estilo para el contenido principal */
+        .content {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff0f5; /* Fondo muy suave */
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .heart::after {
-      right: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
-    }
+        .content h2 {
+            color: #ff4c79;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
 
-    @keyframes beat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-    }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
 
-    p {
-      font-size: 1.5em;
-      margin-top: 20px;
-    }
+        /* Corazón centrado */
+        .heart img {
+            width: 100px;
+            height: auto;
+            margin-top: 20px;
+            animation: heartbeat 1.5s infinite; /* Animación del latido */
+        }
 
-    audio {
-      margin-top: 30px;
-    }
-  </style>
+        /* Animación de latido para el corazón */
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo para el pie de página */
+        footer {
+            background-color: #ff8fa3; /* Rosa suave */
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+        }
+
+        footer .heart-icon {
+            color: #ff4c79;
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Te amo</h1>
-  <div class="heart"></div>
-  <p>Con todo mi corazón</p>
-
-  <audio controls autoplay loop>
-    <source src="https://files.catbox.moe/7fovdk.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
+    <header>
+        <h1>Te Amo</h1>
+        <p>Una página para celebrar el amor</p>
+    </header>
+    <section class="content">
+        <h2>Bienvenido a nuestro pequeño rincón</h2>
+        <p>El amor está en todas partes. Está en las pequeñas cosas, en las grandes gestas, y en los momentos más sencillos.</p>
+        <div class="heart">
+            <img src="https://commons.wikimedia.org/wiki/File:Heart_coraz%C3%B3n.svg" alt="Corazón">
+        </div>
+    </section>
+    <footer>
+        <p>Creado con mucho <span class="heart-icon">❤</span> por nosotros</p>
+    </footer>
 </body>
 </html>
